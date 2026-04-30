@@ -27,83 +27,88 @@
     </script>
 </head>
 <body>
-    <!-- Top Horizontal Banner (Width > Height) -->
-    <div class="ad-top">
+    <!-- TOP HORIZONTAL AD -->
+    <div class="ad-top-wrapper">
         <script type="text/javascript">
             atOptions = { 'key' : '565acdec443f76bd623496ebac99f829', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
         </script>
         <script type="text/javascript" src="//www.highperformanceformat.com/565acdec443f76bd623496ebac99f829/invoke.js"></script>
     </div>
 
-    <div class="page-wrapper">
-        <!-- Left Vertical Skyscraper (Height > Width) -->
-        <div class="ad-side">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'fe1b29a5fc5ac9bc1abadb855ecc5771', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/fe1b29a5fc5ac9bc1abadb855ecc5771/invoke.js"></script>
-        </div>
+    <div class="site-layout">
+        <!-- LEFT VERTICAL AD -->
+        <aside class="ad-sidebar left">
+            <div class="ad-unit">
+                <script type="text/javascript">
+                    atOptions = { 'key' : 'fe1b29a5fc5ac9bc1abadb855ecc5771', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/fe1b29a5fc5ac9bc1abadb855ecc5771/invoke.js"></script>
+            </div>
+        </aside>
 
-        <div class="main-container">
-            <header>
-                <h1>Ecotron Sleep</h1>
-                <p class="subtitle">Wake up refreshed by timing your sleep cycles.</p>
-            </header>
+        <!-- MAIN TOOL SECTION (70% Width) -->
+        <main class="tool-center-stage">
+            <div class="main-container">
+                <header>
+                    <h1>Ecotron Sleep</h1>
+                    <p class="subtitle">Wake up refreshed by timing your sleep cycles.</p>
+                </header>
 
-            <main>
-                <div class="card">
-                    <h3>I want to wake up at...</h3>
-                    <div class="input-group">
-                        <input type="time" id="wake-time" class="premium-input" value="07:00">
-                        <button onclick="calculateBedtime()" class="action-btn">Calculate</button>
+                <div class="tool-content">
+                    <div class="card">
+                        <h3>I want to wake up at...</h3>
+                        <div class="input-group">
+                            <input type="time" id="wake-time" class="premium-input" value="07:00">
+                            <button onclick="calculateBedtime()" class="action-btn">Calculate</button>
+                        </div>
+                        <div id="bedtime-results" class="results"></div>
                     </div>
-                    <div id="bedtime-results" class="results"></div>
+
+                    <div class="divider">OR</div>
+
+                    <div class="card">
+                        <h3>I am going to bed now</h3>
+                        <button onclick="calculateWakeTime()" class="action-btn large">Calculate Wake Up Times</button>
+                        <div id="waketime-results" class="results"></div>
+                    </div>
                 </div>
 
-                <div class="divider">OR</div>
-
-                <div class="card">
-                    <h3>I am going to bed now</h3>
-                    <button onclick="calculateWakeTime()" class="action-btn large">Calculate Wake Up Times</button>
-                    <div id="waketime-results" class="results"></div>
-                </div>
-
-                <article style="text-align: left; margin-top: 3rem; color: #94a3b8; font-size: 0.9rem; line-height: 1.6;">
-                    <h3 style="color: var(--text); margin-bottom: 1rem;">Why Use a Sleep Calculator?</h3>
+                <article class="seo-about">
+                    <h3>Why Use a Sleep Calculator?</h3>
                     <p>Waking up at the end of a 90-minute sleep cycle helps you feel more alert and energetic throughout the day.</p>
                 </article>
-            </main>
 
-            <footer>
-                <div style="margin: 2rem 0; padding-top: 1rem; border-top: 1px solid var(--border);">
-                    <p style="margin-bottom: 10px; font-weight: 600;">Try our other tools:</p>
-                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; font-size: 0.8rem;">
-                        <a href="https://time.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Time</a>
-                        <a href="https://opti.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Opti</a>
-                        <a href="https://lexi.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Lexi</a>
-                        <a href="https://whisper.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Whisper</a>
-                        <a href="https://spin.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Spin</a>
-                    </div>
+                <div class="related-tools">
+                    <p>Try our other tools:</p>
+                    <nav>
+                        <a href="https://time.ecotron.co.in">Time</a>
+                        <a href="https://opti.ecotron.co.in">Opti</a>
+                        <a href="https://lexi.ecotron.co.in">Lexi</a>
+                        <a href="https://whisper.ecotron.co.in">Whisper</a>
+                        <a href="https://spin.ecotron.co.in">Spin</a>
+                    </nav>
                 </div>
-                <p>&copy; 2026 Ecotron Infrastructure</p>
-            </footer>
-        </div>
+                <div class="copyright">&copy; 2026 Ecotron Infrastructure</div>
+            </div>
+        </main>
 
-        <!-- Right Vertical Skyscraper (Height > Width) -->
-        <div class="ad-side">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'ddf55dad83e6db9966289a8c2afdb16e', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/ddf55dad83e6db9966289a8c2afdb16e/invoke.js"></script>
-        </div>
+        <!-- RIGHT VERTICAL AD -->
+        <aside class="ad-sidebar right">
+            <div class="ad-unit">
+                <script type="text/javascript">
+                    atOptions = { 'key' : 'ddf55dad83e6db9966289a8c2afdb16e', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/ddf55dad83e6db9966289a8c2afdb16e/invoke.js"></script>
+            </div>
+        </aside>
     </div>
 
-    <!-- Bottom Horizontal Banners (Width > Height) -->
-    <div class="ad-bottom" style="flex-direction: column; gap: 20px;">
+    <!-- BOTTOM HORIZONTAL ADS -->
+    <div class="ad-bottom-wrapper">
         <script async="async" data-cfasync="false" src="https://developdomicile.com/fa620d200dc33955621d7b76581944c5/invoke.js"></script>
         <div id="container-fa620d200dc33955621d7b76581944c5"></div>
 
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <div class="extra-banners">
             <script type="text/javascript">
                 atOptions = { 'key' : '1c6608e32d36530eb3887dff3bdbe43c', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
             </script>
