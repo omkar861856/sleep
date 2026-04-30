@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecotron Sleep | Optimize Your Sleep Cycles</title>
-    <meta name="description" content="Calculate the perfect time to wake up or go to bed based on 90-minute sleep cycles.">
+    <title>Ecotron Sleep | Sleep Cycle Calculator - Wake Up Refreshed</title>
+    <meta name="description" content="Calculate the perfect time to wake up or go to bed based on 90-minute sleep cycles. Free tool to optimize your sleep and avoid morning grogginess. No signup required.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- SEO: JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Ecotron Sleep",
+      "operatingSystem": "All",
+      "applicationCategory": "HealthApplication",
+      "description": "A sleep cycle calculator that helps users find the best times to sleep and wake up.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Top Horizontal Banner -->
@@ -51,10 +68,25 @@
                     <button onclick="calculateWakeTime()" class="action-btn large">Calculate Wake Up Times</button>
                     <div id="waketime-results" class="results"></div>
                 </div>
+
+                <!-- SEO Content -->
+                <article style="text-align: left; margin-top: 3rem; color: #94a3b8; font-size: 0.9rem; line-height: 1.6;">
+                    <h3 style="color: var(--text); margin-bottom: 1rem;">Why Use a Sleep Calculator?</h3>
+                    <p>Waking up in the middle of a deep sleep stage can leave you feeling tired and groggy. Ecotron Sleep uses the 90-minute cycle method to help you time your alarm perfectly. By waking up at the end of a cycle, you feel more alert and energetic throughout the day.</p>
+                </article>
             </main>
 
             <footer>
-                <p>Each sleep cycle lasts approximately 90 minutes. Aim for 5-6 cycles.</p>
+                <div style="margin: 2rem 0; padding-top: 1rem; border-top: 1px solid var(--border);">
+                    <p style="margin-bottom: 10px; font-weight: 600;">Try our other tools:</p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; font-size: 0.8rem;">
+                        <a href="https://time.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Time</a>
+                        <a href="https://opti.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Opti</a>
+                        <a href="https://lexi.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Lexi</a>
+                        <a href="https://whisper.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Whisper</a>
+                        <a href="https://spin.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Spin</a>
+                    </div>
+                </div>
                 <p>&copy; 2026 Ecotron Infrastructure</p>
             </footer>
         </div>
