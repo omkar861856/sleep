@@ -16,63 +16,59 @@
 
 body {
     background-color: var(--bg-color);
-    background-image: 
-        radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, rgba(192, 132, 252, 0.1) 0px, transparent 50%);
     color: var(--text);
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.ad-top, .ad-bottom {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-}
-
-/* Ad Containers */
-.ad-top, .ad-bottom {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    overflow: hidden;
+    gap: 20px;
 }
 
 .page-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 160px minmax(300px, 600px) 160px;
+    gap: 40px;
     width: 100%;
-    max-width: 1400px;
-    gap: 30px;
+    max-width: 1200px;
+    align-items: start;
+    justify-content: center;
 }
 
 .ad-side {
     width: 160px;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: sticky;
+    top: 20px;
 }
 
 .main-container {
-    flex: 0 1 auto;
-    width: 100%;
-    max-width: 500px; /* Sleep width */
     background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 32px;
+    padding: 3rem;
+    border-radius: 40px;
     border: 1px solid var(--border);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     text-align: center;
+    backdrop-filter: blur(10px);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+    .page-wrapper { grid-template-columns: 1fr; gap: 20px; }
     .ad-side { display: none; }
-    .main-container { max-width: 100%; }
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     background: linear-gradient(to right, #6366f1, #a855f7);
@@ -85,16 +81,14 @@ header h1 {
 .card {
     background: rgba(255, 255, 255, 0.03);
     padding: 2rem;
-    border-radius: 20px;
+    border-radius: 24px;
     margin-bottom: 2rem;
     border: 1px solid var(--border);
 }
 
-.card h3 { margin-bottom: 1.5rem; font-weight: 400; }
-
 .input-group {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     justify-content: center;
     margin-bottom: 1.5rem;
 }
@@ -103,8 +97,8 @@ header h1 {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border);
     color: var(--text);
-    padding: 12px;
-    border-radius: 12px;
+    padding: 12px 20px;
+    border-radius: 14px;
     font-size: 1.1rem;
     outline: none;
 }
@@ -113,58 +107,15 @@ header h1 {
     background: var(--primary);
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 12px;
+    padding: 12px 30px;
+    border-radius: 14px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
 }
 
-.action-btn:hover { background: var(--primary-hover); transform: translateY(-2px); }
-.action-btn.large { width: 100%; padding: 16px; font-size: 1.1rem; }
+.action-btn:hover { background: var(--primary-hover); transform: translateY(-3px); }
+.action-btn.large { width: 100%; padding: 18px; font-size: 1.2rem; }
 
-.divider {
-    margin: 2rem 0;
-    display: flex;
-    align-items: center;
-    color: #475569;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-}
-
-.divider::before, .divider::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-    margin: 0 15px;
-}
-
-.results {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.time-slot {
-    background: rgba(99, 102, 241, 0.1);
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    display: flex;
-    justify-content: space-between;
-    animation: slideUp 0.4s ease-out;
-}
-
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-footer {
-    margin-top: 3rem;
-    color: #64748b;
-    font-size: 0.9rem;
-}
+footer { margin-top: 3rem; color: #64748b; font-size: 0.9rem; }
