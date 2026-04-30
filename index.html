@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecotron Sleep | Optimize Your Sleep Cycles</title>
+    <meta name="description" content="Calculate the perfect time to wake up or go to bed based on 90-minute sleep cycles.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ecotron Sleep</h1>
+            <p class="subtitle">Wake up refreshed by timing your sleep cycles.</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <h3>I want to wake up at...</h3>
+                <div class="input-group">
+                    <input type="time" id="wake-time" class="premium-input" value="07:00">
+                    <button onclick="calculateBedtime()" class="action-btn">Calculate</button>
+                </div>
+                <div id="bedtime-results" class="results"></div>
+            </div>
+
+            <div class="divider">OR</div>
+
+            <div class="card">
+                <h3>I am going to bed now</h3>
+                <button onclick="calculateWakeTime()" class="action-btn large">Calculate Wake Up Times</button>
+                <div id="waketime-results" class="results"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Each sleep cycle lasts approximately 90 minutes. Aim for 5-6 cycles.</p>
+            <p>&copy; 2026 Ecotron Infrastructure</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

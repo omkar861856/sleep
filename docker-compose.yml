@@ -1,0 +1,18 @@
+services:
+  ecotron-sleep:
+    build: .
+    container_name: ecotron-sleep
+    restart: unless-stopped
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.ecotron-sleep.rule=Host(`sleep.ecotron.co.in`)"
+      - "traefik.http.routers.ecotron-sleep.entrypoints=websecure"
+      - "traefik.http.routers.ecotron-sleep.tls.certresolver=myresolver"
+      - "traefik.http.services.ecotron-sleep.loadbalancer.server.port=80"
+
+networks:
+  traefik:
+    external: true
